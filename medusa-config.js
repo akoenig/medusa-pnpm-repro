@@ -1,6 +1,8 @@
-import { loadEnv, defineConfig } from '@medusajs/utils'
+import { loadEnv, defineConfig } from "@medusajs/utils";
 
-loadEnv(process.env.NODE_ENV, process.cwd())
+import { WISHLIST_MODULE } from "./src/modules/wishlist/index.ts";
+
+loadEnv(process.env.NODE_ENV, process.cwd());
 
 module.exports = defineConfig({
   projectConfig: {
@@ -11,6 +13,11 @@ module.exports = defineConfig({
       authCors: process.env.AUTH_CORS,
       jwtSecret: process.env.JWT_SECRET || "supersecret",
       cookieSecret: process.env.COOKIE_SECRET || "supersecret",
-    }
-  }
-})
+    },
+  },
+  modules: {
+    [WISHLIST_MODULE]: {
+      resolve: "./src/modules/wishlist",
+    },
+  },
+});

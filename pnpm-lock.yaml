@@ -86,6 +86,9 @@ importers:
       '@medusajs/user':
         specifier: preview
         version: 0.0.4-preview-20240723060547(@types/node@17.0.45)(pg@8.11.3)
+      '@medusajs/utils':
+        specifier: preview
+        version: 1.12.0-preview-20240723060547(@types/node@17.0.45)(pg@8.11.3)
       '@medusajs/workflow-engine-inmemory':
         specifier: preview
         version: 0.0.5-preview-20240723060547(@types/node@17.0.45)(pg@8.11.3)
